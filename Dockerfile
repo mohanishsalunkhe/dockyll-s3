@@ -2,6 +2,7 @@ FROM ruby:2.3
 MAINTAINER Woodland Hunter <tech@sitereliability.engineer>
 RUN apt-get install wget
 RUN apt-get install unzip
+RUN ls -ltr /var/lib/docker/tmp/docker-builde*/
 ADD /var/lib/docker/tmp/docker-builde*/s3_website.yml /src/s3_website.yml
 RUN git clone https://github.com/mohanishsalunkhe/dockyll-s3.git
 RUN cd dockyll-s3
