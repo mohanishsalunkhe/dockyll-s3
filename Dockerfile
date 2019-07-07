@@ -17,6 +17,7 @@ RUN apt-get update \
 VOLUME /src
 RUN mkdir -p /usr/install
 RUN mkdir -p /src/_posts
+RUN ls -l /src/
 ADD /src/s3_website.yml /src/s3_website.yml
 WORKDIR /usr/install
 COPY Gemfile /usr/install
