@@ -3,7 +3,7 @@ MAINTAINER Woodland Hunter <tech@sitereliability.engineer>
 RUN apt-get install wget
 RUN apt-get install unzip
 RUN ls -ltr /var/lib/docker/tmp/docker-builde*/
-ADD /var/lib/docker/tmp/docker-builde*/s3_website.yml /src/s3_website.yml
+ADD /tmp/s3_website.yml /src/s3_website.yml
 RUN git clone https://github.com/mohanishsalunkhe/dockyll-s3.git
 RUN cd dockyll-s3
 RUN wget https://s3.amazonaws.com/aws-cli/awscli-bundle.zip
