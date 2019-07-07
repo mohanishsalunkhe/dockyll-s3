@@ -14,11 +14,11 @@ RUN apt-get update \
     openjdk-8-jre \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/
-VOLUME /src
+VOLUME /tmp
 RUN mkdir -p /usr/install
 RUN mkdir -p /src/_posts
 RUN ls -l /src/
-ADD /src/s3_website.yml /src/s3_website.yml
+ADD /tmp/s3_website.yml /src/s3_website.yml
 WORKDIR /usr/install
 COPY Gemfile /usr/install
 COPY Gemfile.lock /usr/install
