@@ -2,6 +2,7 @@ FROM ruby:2.3
 MAINTAINER Woodland Hunter <tech@sitereliability.engineer>
 RUN apt-get install wget
 RUN apt-get install unzip
+ADD s3_website.yml /src/s3_website.yml
 RUN git clone https://github.com/mohanishsalunkhe/dockyll-s3.git
 RUN cd dockyll-s3
 RUN wget https://s3.amazonaws.com/aws-cli/awscli-bundle.zip
@@ -18,7 +19,6 @@ VOLUME /tmp
 RUN mkdir -p /usr/install
 RUN mkdir -p /src/_posts
 RUN ls -l /src/
-ADD /tmp/s3_website.yml /src/s3_website.yml
 WORKDIR /usr/install
 COPY Gemfile /usr/install
 COPY Gemfile.lock /usr/install
