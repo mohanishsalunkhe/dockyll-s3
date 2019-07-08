@@ -3,7 +3,7 @@ MAINTAINER Woodland Hunter <tech@sitereliability.engineer>
 VOLUME /tmp
 RUN apt-get install wget
 RUN apt-get install unzip
-RUN ls -ltr /var/lib/docker/tmp/docker-builde*/
+#RUN ls -ltr /var/lib/docker/tmp/docker-builde*/
 ADD /tmp/s3_website.yml /src/s3_website.yml
 RUN git clone https://github.com/mohanishsalunkhe/dockyll-s3.git
 RUN cd dockyll-s3
