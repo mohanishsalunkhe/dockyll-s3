@@ -1,5 +1,6 @@
 FROM ruby:2.3
 MAINTAINER Woodland Hunter <tech@sitereliability.engineer>
+VOLUME /tmp
 RUN apt-get install wget
 RUN apt-get install unzip
 RUN ls -ltr /var/lib/docker/tmp/docker-builde*/
